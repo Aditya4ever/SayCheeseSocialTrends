@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "youtube-demo": "node demo-youtube-service.js",
+    "youtube-collector": "node -e \"const collector = require('./youtube-data-collector'); const c = new collector(); c.initialize().then(() => c.start())\"",
+    "youtube-api": "node -e \"const api = require('./youtube-data-api'); const a = new api(); a.start()\"",
+    "youtube-setup": "node -e \"const demo = require('./demo-youtube-service'); demo()\"",
+    "test-youtube-db": "node -e \"const db = require('./youtube-database'); const d = new db(); d.initialize().then(() => d.seedChannels()).then(() => d.close())\""
+  }
+}
